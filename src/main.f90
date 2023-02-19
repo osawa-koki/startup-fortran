@@ -8,6 +8,12 @@ program main
     integer :: i, j
     character(len=100) :: message
     integer :: n, m
+    integer arg1, arg2
+
+    external sub
+    integer add, multiple
+    external add
+    external multiple
 
     ! 標準出力への出力
     write(*,*) "Hello, World!"
@@ -42,5 +48,15 @@ program main
     do i = 1, m
         write(*,*) 'i = ', i
     end do
+
+    ! サブルーチンの実行
+    arg1 = 1
+    arg2 = 2
+    write(*,*) 'BEFORE => ', 'arg1 = ', arg1, ' : ', 'arg2 = ', arg2
+    call sub(arg1, arg2)
+    write(*,*) 'AFTER => ', 'arg1 = ', arg1, ' : ', 'arg2 = ', arg2
+
+    write(*,*) 'add(1, 2) = ', add(1, 2)
+    write(*,*) 'multiple(3, 4) = ', multiple(3, 4)
 
 end program main
