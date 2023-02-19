@@ -17,6 +17,8 @@ program main
     external add
     external multiple
 
+    character(len=100) :: filename, content
+
     ! 標準出力への出力
     write(*,*) "Hello, World!"
     i = 1
@@ -62,5 +64,12 @@ program main
     write(*,*) 'Enter to call function.'; read(*,*)
     write(*,*) 'add(1, 2) = ', add(1, 2)
     write(*,*) 'multiple(3, 4) = ', multiple(3, 4)
+
+    ! ファイルへの書き込み
+    write(*,*) 'Enter filename.'; read(*,*) filename
+    write(*,*) 'Enter content.'; read(*,*) content
+    open(unit=1, file=filename, status='replace')
+    write(1,*) content
+    close(1)
 
 end program main
