@@ -49,6 +49,8 @@ program main
         write(*,*) 'i = ', i
     end do
 
+    write(*,*) 'Enter to call subroutine.'; read(*,*)
+
     ! サブルーチンの実行
     arg1 = 1
     arg2 = 2
@@ -56,6 +58,8 @@ program main
     call sub(arg1, arg2)
     write(*,*) 'AFTER => ', 'arg1 = ', arg1, ' : ', 'arg2 = ', arg2
 
+    ! 関数の実行
+    write(*,*) 'Enter to call function.'; read(*,*)
     write(*,*) 'add(1, 2) = ', add(1, 2)
     write(*,*) 'multiple(3, 4) = ', multiple(3, 4)
 
