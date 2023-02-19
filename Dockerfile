@@ -1,6 +1,4 @@
 FROM ubuntu:latest
-
-RUN apt-get update && \
-    apt-get install gfortran -y
-
+RUN apt update && \
+    apt install gfortran make -y
 WORKDIR /app
