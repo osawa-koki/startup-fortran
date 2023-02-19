@@ -1,6 +1,6 @@
 # startup-fortran
 
-🦄🦄🦄 Fortranプログラムのサンプル。  
+🦓🦓🦓 Fortranプログラムのサンプル。  
 Docker上で動作させます。  
 
 ## 実行方法
